@@ -1,0 +1,45 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  - trigger: ":atb"
+    replace: "All the best,\nHayden Braxton"
+
+  - trigger: ":emailubt"
+    replace: "haydenbraxton@unboxedtechnology.com"
+
+  - trigger: ":email"
+    replace: "haydenbraxton@haydenbraxton.com"
+
+  - trigger: ":d.qs"
+    replace: "document.querySelector('')"
+
+  - trigger: ":d.qs-a"
+    replace: "document.querySelector('')"
+
+  # Dates
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"

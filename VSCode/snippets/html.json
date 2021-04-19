@@ -1,0 +1,47 @@
+{
+	"content": {
+		"prefix": "content",
+		"body": [
+			"<section class=\"content-slide\">",
+      "</section>"
+		]
+	},
+	"notes": {
+		"prefix": "notes",
+		"body": [
+			"<aside class=\"notes\">",
+			"\t<ul>",
+			"\t\t<li></li>",
+			"\t</ul>",
+			"</aside>"
+		]
+	},
+	"dark-bg": {
+		"prefix": "dark-bg",
+		"body": [
+			"<section data-background-image=\"./assets/images/dark-bg.png\">",
+			"</section>"
+		]
+	},
+	"code": {
+		"prefix": "code",
+		"body": [
+			"<pre>",
+			"\t<code class=\"javascript\" data-trim contenteditable>",
+			"\t</code>",
+			"</pre>"
+		]
+	},
+	"page-title": {
+		"prefix": "page-title",
+		"body": [
+			"<div class=\"page-title\"></div>"
+		]
+	},
+	"image": {
+		"prefix": "image",
+		"body": [
+			"<img src=\"./assets/images/\">"
+		]
+	}
+}
