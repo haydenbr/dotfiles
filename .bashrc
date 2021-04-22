@@ -23,6 +23,7 @@ alias pyserve='python -m SimpleHTTPServer'
 alias redux_on='export ENABLE_DEBUG_REDUX=true'
 alias redux_off='unset ENABLE_DEBUG_REDUX'
 alias npmplease🙏="echo 'rm -rf node_modules/ && rm -f package-lock.json && npm install'"
+alias dotfiles='~/Projects/dotfiles/sync.sh'
 
 # git
 alias gs='git status'
