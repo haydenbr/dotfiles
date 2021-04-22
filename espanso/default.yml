@@ -14,16 +14,13 @@ matches:
   - trigger: ":atb"
     replace: "All the best,\nHayden Braxton"
 
-  - trigger: ":emailubt"
-    replace: "haydenbraxton@unboxedtechnology.com"
+  - trigger: ":workemail"
+    replace: "hayden@svtrobotics.com"
 
   - trigger: ":email"
     replace: "haydenbraxton@haydenbraxton.com"
 
   - trigger: ":d.qs"
-    replace: "document.querySelector('')"
-
-  - trigger: ":d.qs-a"
     replace: "document.querySelector('')"
 
   # Dates
