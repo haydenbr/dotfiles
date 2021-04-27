@@ -5,6 +5,8 @@ brew install --cask zoom
 brew install --cask vscodium
 brew install --cask docker
 brew install kubernetes-cli
+brew install --cask dotnet-sdk
+brew install md5sha1sum
 
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
