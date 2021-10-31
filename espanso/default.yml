@@ -15,7 +15,7 @@ matches:
     replace: "All the best,\nHayden Braxton"
 
   - trigger: ":workemail"
-    replace: "hayden@svtrobotics.com"
+    replace: "hayden.braxton@everactive.com"
 
   - trigger: ":email"
     replace: "haydenbraxton@haydenbraxton.com"
