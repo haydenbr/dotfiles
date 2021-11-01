@@ -19,6 +19,7 @@ brew install jq
 brew install openssl
 brew tap federico-terzi/espanso
 brew install espanso
+brew install --cask postman
 
 bnew upgrade
 
