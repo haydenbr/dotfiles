@@ -1,8 +1,6 @@
 # apps
-alias code='open -a /Applications/Visual\ Studio\ Code.app'
 alias md='open -a /Applications/MacDown.app'
 alias activ='open /Applications/Utilities/Activity\ Monitor.app'
-alias code='codium'
 alias v='code .'
 
 # nand2tetris

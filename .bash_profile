@@ -1,12 +1,11 @@
 # PATH ENV variable
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
-export PATH=/usr/local/lib/node_modules/cordova/bin:$PATH
-export PATH=/usr/local/bin/bob:$PATH
-export PATH=/usr/local/Cellar/python/2.7.13_1/bin:$PATH
 export PATH=~/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source ~/.bashrc
 
 # Enable git tab completion
 source ~/git-completion.bash
