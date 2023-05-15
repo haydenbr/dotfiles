@@ -18,9 +18,6 @@ alias show_hidden_true='defaults write com.apple.finder AppleShowAllFiles TRUE;k
 alias show_hidden_false='defaults write com.apple.finder AppleShowAllFiles FALSE;killall Finder'
 alias time=' echo $(date + "%r")'
 alias pyserve='python -m SimpleHTTPServer'
-alias redux_on='export ENABLE_DEBUG_REDUX=true'
-alias redux_off='unset ENABLE_DEBUG_REDUX'
-alias npmplease🙏="echo 'rm -rf node_modules/ && rm -f package-lock.json && npm install'"
 alias dotfiles='~/Projects/dotfiles/sync.sh'
 
 # git
