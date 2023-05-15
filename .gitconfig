@@ -1,7 +1,8 @@
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [user]
 	name = Hayden Braxton
 	email = haydenbraxton@haydenbraxton.com
@@ -12,10 +13,9 @@
 [credential]
 	helper = osxkeychain
 [alias]
-	cnewb = !""
-
-	files = !"git show --pretty="" --name-only"
-	message = !"git log --format=%B -n 1"
+	files = "show --pretty="" --name-only"
+	message = "log --format=%B -n 1"
+	amend = "commit --amend"
 
 	lg = !"git lg1"
 	lg1 = !"git lg1-specific --all"
@@ -26,7 +26,9 @@
 	lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 	lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
 
-	amend = !"git commit --amend"
+	release-notes = !"git log --pretty=format:'%Cred%h%Creset %s %Cgreen(%ci)%Creset' --abbrev-commit \"$1\"..\"$2\" --no-merges #"
+	brea = !"git checkout -b hayden.braxton/CLOUD-\"$1\"_\"$2\" #"
+	cmtea = !"BRANCH=$(git rev-parse --abbrev-ref HEAD | sed 's|hayden.braxton/||' | sed -E 's|_.+||'); echo \"$BRANCH. $1\"; git commit -m \"$BRANCH. $1\" #"
 [pull]
 	rebase = true
 [push]
