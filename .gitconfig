@@ -5,7 +5,7 @@
 	process = git-lfs filter-process
 [user]
 	name = Hayden Braxton
-	email = haydenbraxton@haydenbraxton.com
+	email = haydenbraxton@flocksafety.com
 [color]
 	ui = auto
 [merg]

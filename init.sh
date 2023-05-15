@@ -20,6 +20,7 @@ brew install --cask firefox
 brew install --cask iterm2
 brew install --cask wireshark
 brew install --cask protonvpn
+brew install --cask yubico-authenticator
 
 brew tap federico-terzi/espanso
 brew install espanso
