@@ -1,6 +1,10 @@
 # PATH ENV variable
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 export PATH=~/bin:$PATH
+
+export GOPATH=$HOME/Go
+export PATH=$GOPATH/bin:$PATH
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
