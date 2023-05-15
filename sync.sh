@@ -18,13 +18,3 @@ source ~/git-prompt.sh
 rm -r ~/Library/Preferences/espanso
 ln -s ~/Projects/dotfiles/espanso ~/Library/Preferences
 espanso restart > /dev/null
-
-# vscode
-ln -sf ~/Projects/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User
-ln -sf ~/Projects/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User
-
-rm -r ~/Library/Application\ Support/Code/User/snippets
-ln -s ~/Projects/dotfiles/vscode/snippets ~/Library/Application\ Support/Code/User
-
-rm -r ~/.vscode/extensions
-ln -s ~/Projects/dotfiles/vscode/extensions ~/.vscode

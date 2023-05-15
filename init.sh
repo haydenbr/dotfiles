@@ -24,7 +24,7 @@ brew install --cask protonvpn
 brew tap federico-terzi/espanso
 brew install espanso
 
-bnew upgrade
+brew upgrade
 
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
