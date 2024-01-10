@@ -4,23 +4,37 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in
 
 brew update
 
-brew install kubernetes-cli
-brew install md5sha1sum
-brew install awscli
-brew install jq
-brew install openssl
-brew install go
-brew install coreutils
+brew install kubernetes-cli \
+	md5sha1sum \
+	awscli \
+	jq \
+	openssl \
+	go \
+	coreutils \
+	saml2aws \
+	graphviz \
+	ghostscript \
+	terraform
 
-brew install --cask slack
-brew install --cask zoom
-brew install --cask visual-studio-code
-brew install --cask docker
-brew install --cask firefox
-brew install --cask iterm2
-brew install --cask wireshark
-brew install --cask protonvpn
-brew install --cask yubico-authenticator
+brew install --cask slack \
+	zoom \
+	visual-studio-code \
+	docker \
+	firefox \
+	google-chrome \
+	iterm2 \
+	wireshark \
+	protonvpn \
+	yubico-authenticator \
+	aws-vpn-client \
+	drawio \
+	microsoft-remote-desktop \
+	postman \
+	remarkable \
+	vlc \
+	drawio \
+	datagrip
+
 
 brew tap federico-terzi/espanso
 brew install espanso
@@ -37,3 +51,5 @@ export NVM_DIR="$HOME/.nvm"
 espanso --version
 espanso register
 
+# rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

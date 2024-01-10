@@ -5,17 +5,20 @@
 	process = git-lfs filter-process
 [user]
 	name = Hayden Braxton
-	email = haydenbraxton@flocksafety.com
+	email = hayden.braxton@flocksafety.com
 [color]
 	ui = auto
-[merg]
-	conflictstyle = diff3
+[merge]
+	ff = no
 [credential]
 	helper = osxkeychain
 [alias]
+	s = "status"
+	c = "commit"
 	files = "show --pretty="" --name-only"
 	message = "log --format=%B -n 1"
 	amend = "commit --amend"
+	changes = !"git diff $1~1 $1 #"
 
 	lg = !"git lg1"
 	lg1 = !"git lg1-specific --all"
@@ -27,8 +30,8 @@
 	lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
 
 	release-notes = !"git log --pretty=format:'%Cred%h%Creset %s %Cgreen(%ci)%Creset' --abbrev-commit \"$1\"..\"$2\" --no-merges #"
-	brea = !"git checkout -b hayden.braxton/CLOUD-\"$1\"_\"$2\" #"
-	cmtea = !"BRANCH=$(git rev-parse --abbrev-ref HEAD | sed 's|hayden.braxton/||' | sed -E 's|_.+||'); echo \"$BRANCH. $1\"; git commit -m \"$BRANCH. $1\" #"
+	br = !"git checkout -b hayden.braxton/CVID-\"$1\"_\"$2\" #"
+	cmt = !"ISSUE=$(git rev-parse --abbrev-ref HEAD | sed 's|hayden.braxton/||' | sed -E 's|_.+||'); echo \"$1($ISSUE): $2\"; git commit -m \"$1($ISSUE): $2\" #"
 [pull]
 	rebase = true
 [push]

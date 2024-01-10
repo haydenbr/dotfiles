@@ -9,6 +9,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Make go executables accessible
+export PATH="$(go env GOPATH)/bin:$PATH"
+# Check that git-hooks are installed on git
+function cd() {
+  builtin cd "$@"
+  # if we are in a directory with githooks, check if they are installed
+  if [[ -f githooks.json ]]
+  then
+    git-hooks | grep "Git hooks are NOT installed in this repository" > /dev/null  && echo "🚨🚨 Please run \"git-hooks install\"!! 🚨🚨";
+  fi
+}
+
 source ~/.bashrc
 
 # Enable git tab completion
@@ -29,3 +41,4 @@ reset="\[\033[0m\]"
 source ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="$cyan\u$green\$(__git_ps1)$blue \W $ $reset"
+. "$HOME/.cargo/env"

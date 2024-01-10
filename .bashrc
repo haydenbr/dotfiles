@@ -24,3 +24,4 @@ alias dotfiles='~/Projects/dotfiles/sync.sh'
 alias gs='git status'
 alias gc='git commit -m'
 alias push-test='git checkout test && git pull && git rebase dev && git push && git checkout dev'
+. "$HOME/.cargo/env"

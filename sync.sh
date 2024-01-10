@@ -18,3 +18,6 @@ source ~/git-prompt.sh
 rm -r ~/Library/Preferences/espanso
 ln -s ~/Projects/dotfiles/espanso ~/Library/Preferences
 espanso restart > /dev/null
+
+# vscode keybindings
+ln -sf ~/Projects/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
